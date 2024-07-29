@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tesis y Memorias de Estadías</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?=11" />
+    <link rel="stylesheet" href="css/utilities.css?=10" />
+    <style>
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-gallery a {
+            flex-basis: calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery a {
+                flex-basis: calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-gallery a {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .breadcrumb-container {
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item {
+            font-size: 14px;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            content: ">";
+            padding: 0 5px;
+            color: #6c757d;
+        }
+
+        .breadcrumb-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #6c757d;
+        }
+
+        .breadcrumb-item i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="hero">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <h1 id="logo">
+                </h1>
+                <!-- Navbar links -->
+                <ul class="nav-menu">
+                    <li><a data-i18n="nav.changeLanguageProject" class="nav-link" href="#projects">PROYECTOS</a></li>
+                    <li><a data-i18n="nav.changeLanguageTecnology" class="nav-link"
+                            href="#tecnology">TECNOLOGÍAS/HERRAMIENTAS</a>
+                    </li>
+                    <li><a data-i18n="nav.changeLanguageAbout me" class="nav-link" href="#sobre-mi">SOBRE MI</a></li>
+
+                    <!-- Cambio de idioma -->
+                    <li>
+                        <div class="dropdown">
+                            <button id="langSwitch" class="button" onclick="toggleDropdown()"
+                                data-i18n="nav.changeLanguage">Cambiar
+                                Idioma</button>
+                            <div class="dropdown-content" id="myDropdown">
+                                <a href="#" data-lang="english">
+                                    <img src="img/en_flag.png" alt="English" class="flag-icon"> English
+                                </a>
+                                <a href="#" data-lang="spanish">
+                                    <img src="img/es_flag.png" alt="Spanish" class="flag-icon"> Español
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Toggle switch -->
+                    <div class="theme-switch">
+                        <input type="checkbox" id="switch" />
+                        <label class="toggle-icons" for="switch">
+                            <img class="moon" src="assets/moon.svg" />
+                            <img class="sun" src="assets/sun.svg" />
+                        </label>
+                    </div>
+                    <!-- Hamburger menu -->
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="header-container">
+            <div class="content-text">
+                <h2 data-i18n="body.repositorio">Repositorio de Tesis y Memorias de Estadías (UTESC)</h2>
+            </div>
+        </section>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Repositorio de Tesis y Memorias de Estadías
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="image-gallery">
+            <a href="img/repo1.webp" data-lightbox="image-gallery" data-title="Imagen 1">
+                <img src="img/repo1.webp" alt="Imagen 1">
+            </a>
+            <a href="img/repo2.webp" data-lightbox="image-gallery" data-title="Imagen 2">
+                <img src="img/repo2.webp" alt="Imagen 2">
+            </a>
+            <a href="img/repo3.webp" data-lightbox="image-gallery" data-title="Imagen 3">
+                <img src="img/repo3.webp" alt="Imagen 3">
+            </a>
+            <a href="img/repo4.webp" data-lightbox="image-gallery" data-title="Imagen 4">
+                <img src="img/repo4.webp" alt="Imagen 4">
+            </a>
+            <a href="img/repo5.webp" data-lightbox="image-gallery" data-title="Imagen 5">
+                <img src="img/repo5.webp" alt="Imagen 5">
+            </a>
+            <a href="img/repo6.webp" data-lightbox="image-gallery" data-title="Imagen 6">
+                <img src="img/repo6.webp" alt="Imagen 6">
+            </a>
+
+        </div>
+        &nbsp; &#160;
+        &nbsp; &#160;
+        &nbsp; &#160;
+        &nbsp; &#160;
+    </main>
+
+
+    <footer id="footer-container"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/script.js?=4"></script>
+    <script>
+        fetch('footer.html?=2')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Función para cambiar el idioma
+            function changeLanguage(lang) {
+                document.documentElement.setAttribute('lang', lang);
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                localStorage.setItem('preferredLanguage', lang);
+            }
+
+            // Verificar el parámetro de idioma en la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            if (lang && (lang === 'english' || lang === 'spanish')) {
+                changeLanguage(lang);
+            } else {
+                // Si no hay parámetro de idioma, usar el idioma almacenado o el predeterminado
+                const storedLang = localStorage.getItem('preferredLanguage') || 'spanish';
+                changeLanguage(storedLang);
+            }
+        });
+    </script>
+</body>
+
+</html>

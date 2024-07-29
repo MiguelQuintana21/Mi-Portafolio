@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "nuevo_portafolio",
+			"path": "."
+		},
+		{
+			"name": "img",
+			"path": "../portafolio/img"
+		}
+	],
+	"settings": {}
+}

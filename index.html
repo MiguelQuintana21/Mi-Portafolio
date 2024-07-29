@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>Mi Portafolio</title>
+  <style>
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    .up {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+
+    .down {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+
+    .card1 {
+      width: 90px;
+      height: 90px;
+      outline: none;
+      border: none;
+      background: white;
+      border-radius: 90px 5px 5px 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      transition: .2s ease-in-out;
+    }
+
+    .instagram {
+      margin-top: 1.5em;
+      margin-left: 1.2em;
+      fill: #cc39a4;
+    }
+
+    .card2 {
+      width: 90px;
+      height: 90px;
+      outline: none;
+      border: none;
+      background: white;
+      border-radius: 5px 90px 5px 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      transition: .2s ease-in-out;
+    }
+
+    .twitter {
+      margin-top: 1.5em;
+      margin-left: -.9em;
+      fill: #03A9F4;
+    }
+
+    .card3 {
+      width: 90px;
+      height: 90px;
+      outline: none;
+      border: none;
+      background: white;
+      border-radius: 5px 5px 5px 90px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      transition: .2s ease-in-out;
+    }
+
+    .github {
+      margin-top: -.6em;
+      margin-left: 1.2em;
+    }
+
+    .card4 {
+      width: 90px;
+      height: 90px;
+      outline: none;
+      border: none;
+      background: white;
+      border-radius: 5px 5px 90px 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      transition: .2s ease-in-out;
+    }
+
+    .discord {
+      margin-top: -.9em;
+      margin-left: -1.2em;
+      fill: #8c9eff;
+    }
+
+    .card1:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #cc39a4;
+    }
+
+    .card1:hover .instagram {
+      fill: white;
+    }
+
+    .card2:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #03A9F4;
+    }
+
+    .card2:hover .twitter {
+      fill: white;
+    }
+
+    .card3:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: black;
+    }
+
+    .card3:hover .github {
+      fill: white;
+    }
+
+    .card4:hover {
+      cursor: pointer;
+      scale: 1.1;
+      background-color: #8c9eff;
+    }
+
+    .card4:hover .discord {
+      fill: white;
+    }
+
+
+    .orbit-container {
+      perspective: 1000px;
+    }
+
+    .orbit {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      animation: orbit 20s linear infinite;
+    }
+
+    .orbit-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotateY(calc(var(--i) * 60deg)) translateZ(150px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s;
+    }
+
+    .orbit-item:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotateY(calc(var(--i) * 60deg)) translateZ(180px) scale(1.2);
+    }
+
+    @keyframes orbit {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  </style>
+  <meta name="title" content="Portfolio Template - Open source" />
+  <meta name="description"
+    content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project" />
+
+
+
+  <!-- Link -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css?=9" />
+  <link rel="stylesheet" href="css/utilities.css?=13" />
+  <link rel="icon" href="img/portafolio.ico">
+
+</head>
+
+
+<body>
+  <header id="hero">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <h1 id="logo">
+        </h1>
+        <!-- Navbar links -->
+        <ul class="nav-menu">
+          <li><a data-i18n="nav.changeLanguageProject" class="nav-link" href="#projects">PROYECTOS</a></li>
+          <li><a data-i18n="nav.changeLanguageTecnology" class="nav-link" href="#tecnology">TECNOLOGÍAS/HERRAMIENTAS</a>
+          </li>
+          <li><a data-i18n="nav.changeLanguageAbout me" class="nav-link" href="#sobre-mi">SOBRE MI</a></li>
+
+          <!-- Cambio de idioma -->
+          <li>
+            <div class="dropdown">
+              <button id="langSwitch" class="button" onclick="toggleDropdown()" data-i18n="nav.changeLanguage">Cambiar
+                Idioma</button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#" data-lang="english">
+                  <img src="img/en_flag.png" alt="English" class="flag-icon"> English
+                </a>
+                <a href="#" data-lang="spanish">
+                  <img src="img/es_flag.png" alt="Spanish" class="flag-icon"> Español
+                </a>
+              </div>
+            </div>
+          </li>
+          <!-- Toggle switch -->
+          <div class="theme-switch">
+            <input type="checkbox" id="switch" />
+            <label class="toggle-icons" for="switch">
+              <img class="moon" src="assets/moon.svg" />
+              <img class="sun" src="assets/sun.svg" />
+            </label>
+          </div>
+          <!-- Hamburger menu -->
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="header-container">
+      <img class="profile-image" src="img/foto_perfil.png" alt="" />
+      <h2 data-i18n="body.my">Hola, soy Miguel Ángel Arenas Quintana</h2>
+      <div class="content-text">
+        <h2 data-i18n="hero.greeting">Diseñador Y Desarrollador frontend</h2>
+        <h3 data-i18n="hero.description">Me apasiona diseñar y codificar experiencias simples y elegantes. Disfruto
+          convertir ideas complejas en
+          soluciones intuitivas.</h3>
+      </div>
+      <a href="cv/CV Inglés.pdf" download="CV Inglés.pdf" class="btn btn-secondary" data-i18n="body.cvingles">DESCARGAR
+        CV EN INGLÉS</a>
+
+      <a href="ruta/al/archivo/CV Inglés.pdf" download="CV Inglés.pdf" class="btn btn-secondary"
+        data-i18n="body.cvespanol">DESCARGAR CV EN ESPAÑOL</a>
+
+    </section>
+  </header>
+
+  <!-- Banner de la universidad -->
+
+  <div class="banner">
+    <div data-i18n="body.banner" class="banner-text">Mis proyectos hechos en:Universidad Tecnológica de Escuinapa</div>
+  </div>
+
+  <!-- Projects -->
+  <section id="projects" class="project-container container">
+    </div>
+
+    <article class="project">
+      <!-- Project 1 -->
+      <div class="card" data-href="repositorio.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="body.repositorio">Repositorio de Tesis y Memorias de Estadías (UTESC)</h3>
+            <p>ReactJsx, Vite</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card" data-href="centro_de_idiomas.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="body.idiomas">Centro de Idiomas (UTESC)</h3>
+            <p>Html,Css,Php</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Porject 3 -->
+      <div class="card" data-href="adivina_cancion.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="body.adivina">Adivina la Canción (Juego)</h3>
+            <p>Html,Css,Php</p>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <!-- Project 4 -->
+      <div class="card" data-href="xclothes.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="body.xclothes">Xclothes (Tienda de Ropa)</h3>
+            <p>Flutter, Supabase</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="card" data-href="quiz-team.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="quiz.quizteam">Quiz-Team (Juego de Trivia)</h3>
+            <p>ReactJS, Vite</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="card" data-href="biblioteca.html">
+        <div class="project-info">
+          <div class="project-bio">
+            <h3 data-i18n="body.biblioteca">Biblioteca Web</h3>
+            <p>Html,Css,Php</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- Sobre mi -->
+
+  <!-- Tecnologías -->
+  <section id="tecnology"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; padding: 20px;">
+    <div class="division"></div>
+    <div class="content-text" style="text-align: center; margin-bottom: 20px;">
+      <h2 data-i18n="body.Tecnologias/Herramientas/Lenguajes">Tecnologías, Herramientas y Lenguajes de programación</h2>
+    </div>
+    <!-- cards -->
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <div class="custom-card">
+        <div class="custom-card-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <div data-i18n="body.Diseñador" class="custom-card-title">Diseñador</div>
+        <div data-i18n="body.cosasquedisfruto" class="custom-card-subtitle">Cosas que disfruto diseñando:</div>
+        <div data-i18n="body.cosas" class="custom-card-text">UX, UI, Web, Apps, Logos, Ilustraciones</div>
+        <div data-i18n="body.Herramientas" class="custom-card-subtitle">Herramientas de diseño</div>
+        <div class="custom-card-text">Canva, Figma</div>
+      </div>
+
+      <div class="custom-card">
+        <div class="custom-card-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <div data-i18n="body.dev" class="custom-card-title">Desarrollador frontend</div>
+        <div data-i18n="body.lenguajes" class="custom-card-subtitle">Lenguajes</div>
+        <div class="custom-card-text">HTML, CSS, PHP, ReactJSX</div>
+        <div data-i18n="body.Frameworks" class="custom-card-subtitle">Frameworks de diseño</div>
+        <div class="custom-card-text">Ant Design, Bootstrap</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mi -->
+  <section id="sobre-mi"
+    style="background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 60px 20px; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div style="max-width: 1200px; width: 100%; position: relative;">
+      <h2 data-i18n="body.Sobre mi"
+        style="font-size: 3rem; text-align: center; margin-bottom: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        Sobre mí
+      </h2>
+
+      <div class="content-wrapper"
+        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1 1 300px; padding: 20px;">
+          <div
+            style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);">
+            <h3 style="font-size: 2rem; margin-bottom: 20px;">Miguel Ángel Arenas Quintana</h3>
+            <p data-i18n="body.Sobre mi descripcion" style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 20px;">
+              Desarrollador Frontend & Estudiante apasionado de Escuinapa, Sinaloa, México.
+              Fusiono creatividad y tecnología para crear experiencias web cautivadoras.
+            </p>
+          </div>
+        </div>
+
+        <div class="orbit-container" style="flex: 1 1 300px; padding: 20px; position: relative;">
+          <div class="photo"
+            style="width: 200px; height: 200px; background: url('img/sobre-mi.jpg') center/cover; border-radius: 50%; margin: 0 auto; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
+          </div>
+          <div class="orbit">
+            <div class="orbit-item" style="--i:0;"><span>HTML5</span></div>
+            <div class="orbit-item" style="--i:1;"><span>CSS</span></div>
+            <div class="orbit-item" style="--i:2;"><span>JavaScript</span></div>
+            <div class="orbit-item" style="--i:3;"><span>ReactJSX</span></div>
+            <div class="orbit-item" style="--i:4;"><span>Bootstrap</span></div>
+            <div class="orbit-item" style="--i:5;"><span>AntDesign</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="info-adicional" style="margin-top: 40px; text-align: center;">
+        <button data-i18n="body.Especialidades" onclick="showInfo('especialidades')"
+          style="background: #000000; border: none; padding: 10px 20px; margin: 10px; border-radius: 25px; color: white; cursor: pointer; transition: all 0.3s;">Especialidades</button>
+        <button data-i18n="body.Aspiraciones" onclick="showInfo('aspiraciones')"
+          style="background: #0f3460; border: none; padding: 10px 20px; margin: 10px; border-radius: 25px; color: white; cursor: pointer; transition: all 0.3s;">Aspiraciones</button>
+
+        <div id="info-content"
+          style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 20px; margin-top: 20px; backdrop-filter: blur(5px); display: none;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+
+      <p>Miguel Ángel Arenas Quintana</p>
+
+    </div>
+  </footer>
+  <script src="js/script.js?=3"></script>
+  <script>
+    function showInfo(type) {
+      const content = document.getElementById('info-content');
+      let html = '';
+
+      if (type === 'especialidades') {
+        html = `
+      <h4 data-i18n="body.Especialidades" style="font-size: 1.5rem; margin-bottom: 15px;">Especialidades</h4>
+      <ul style="list-style-type: none; padding: 0;">
+        <li data-i18n="body.EspecialidadesDesc1" style="margin-bottom: 10px;">🚀 Optimización de Rendimiento</li>
+        <li data-i18n="body.EspecialidadesDesc2" style="margin-bottom: 10px;">🎨 Desarrollo de Interfaces Intuitivas</li>
+      </ul>
+    `;
+      } else {
+        html = `
+      <h4 data-i18n="body.Aspiraciones" style="font-size: 1.5rem; margin-bottom: 15px;">Aspiraciones</h4>
+      <p data-i18n="body.AspiracionesDesc" style="font-size: 1.1rem; line-height: 1.6;">
+        Aspiro a contribuir al avance tecnológico de mi región y más allá, creando soluciones web innovadoras 
+        que mejoren la experiencia digital de los usuarios. Mi meta es estar siempre a la vanguardia, 
+        aprendiendo constantemente nuevas tecnologías y metodologías en el mundo del desarrollo frontend.
+      </p>
+    `;
+      }
+
+      content.innerHTML = html;
+      content.style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
