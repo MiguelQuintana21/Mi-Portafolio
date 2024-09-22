@@ -127,6 +127,8 @@ const translations = {
     "nav.changeLanguageProject": "PROJECTS",
     "nav.changeLanguageTecnology": "TECHNOLOGIES/TOOLS",
     "nav.changeLanguageAbout me": "ABOUT ME",
+    "nav.changeLanguageAbout for": "ACADEMIC TRAINER",
+    "nav.changeLanguageAbout lab": "WORK EXPERIENCE",
     "nav.changeLanguage": "Change Language",
     "body.banner": "My projects done at: Technological University of Escuinapa",
     "body.cvingles": "DOWNLOAD CV IN ENGLISH",
@@ -158,6 +160,15 @@ const translations = {
     // PáginaCentroDeIdiomas
     "centro.Centrodeidiomas": "Language center (UTESC)",
     "quiz.quizteam": "Quizz-Team (Trivia Game)",
+    "body.tecnico": "Programming Technician",
+    "body.tecnicosuperior": "Higher University Technician",
+    "body.graduacion1": "Graduation year: 2020",
+    "body.graduacion2": "Graduation year: 2023",
+    "body.practicas": "Professional Internships",
+    "body.duracion": "Duration: 4 months",
+    "body.desc": "Professional internship at the Technological University of Escuinapa.",
+
+
 
 
 
@@ -170,6 +181,8 @@ const translations = {
     "nav.changeLanguageProject": "PROYECTOS",
     "nav.changeLanguageTecnology": "TECNOLOGÍAS/HERRAMIENTAS",
     "nav.changeLanguageAbout me": "SOBRE MI",
+    "nav.changeLanguageAbout for": "FORMACIÓN ACADÉMICA",
+    "nav.changeLanguageAbout lab": "EXPERIENCIA LABORAL",
     "nav.changeLanguage": "Cambiar Idioma",
     "body.banner": "Mis proyectos hechos en:Universidad Tecnológica de Escuinapa",
     "body.cvingles": "DESCARGAR CV EN INGLÉS",
@@ -202,6 +215,20 @@ const translations = {
     // PáginaCentroDeIdiomas
     "centro.Centrodeidiomas": "Centro de Idiomas (UTESC)",
     "quiz.quizteam": "Quizz-Team (Juego de Trivia)",
+    "body.tecnico": "Técnico en Programación",
+    "body.tecnicosuperior": "Técnico Superior Universitario",
+    "body.graduacion1": "Año de graduación: 2020",
+    "body.graduacion2": "Año de graduación: 2023",
+    "body.practicas": "Prácticas Profesionales",
+    "body.duracion": "Duración: 4 meses",
+    "body.desc": "Prácticas profesionales en la Universidad Tecnológica de Escuinapa.",
+
+
+
+
+
+
+
 
   }
 };

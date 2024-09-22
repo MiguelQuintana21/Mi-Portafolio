@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
   <title>Mi Portafolio</title>
+  <link rel="manifest" href="manifest.json">
   <style>
     .main {
       display: flex;
@@ -180,9 +181,6 @@
       }
     }
   </style>
-  <meta name="title" content="Portfolio Template - Open source" />
-  <meta name="description"
-    content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project" />
 
 
 
@@ -213,6 +211,11 @@
           <li><a data-i18n="nav.changeLanguageTecnology" class="nav-link" href="#tecnology">TECNOLOGÍAS/HERRAMIENTAS</a>
           </li>
           <li><a data-i18n="nav.changeLanguageAbout me" class="nav-link" href="#sobre-mi">SOBRE MI</a></li>
+
+          <li><a data-i18n="nav.changeLanguageAbout for" class="nav-link" href="#formacion-academica">FORMACIÓN
+              ACADÉMICA</a></li>
+          <li><a data-i18n="nav.changeLanguageAbout lab" class="nav-link" href="#experiencia-laboral">EXPERIENCIA
+              LABORAL</a></li>
 
           <!-- Cambio de idioma -->
           <li>
@@ -432,16 +435,95 @@
     </div>
   </section>
 
+
+  <section id="formacion-academica"
+    style="background: linear-gradient(135deg, #1a1a2e, #0f1012); color: #ecf0f1; padding: 60px 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div style="max-width: 1200px; width: 100%;">
+      <h2 data-i18n="nav.changeLanguageAbout for"
+        style="font-size: 3rem; text-align: center; margin-bottom: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        Formación Académica
+      </h2>
+
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px;">
+        <div class="titulo-card"
+          style="flex: 1 1 400px; background: rgba(236, 240, 241, 0.1); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+          <div style="padding: 20px;">
+            <h3 data-i18n="body.tecnico" style="font-size: 1.8rem; margin-bottom: 15px;">Técnico en Programación</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">CBTIS No. 152</p>
+            <p data-i18n="body.graduacion1" style=" font-style: italic;">Año de graduación: 2020</p>
+          </div>
+          <div
+            style="height: 250px; background-color: #bdc3c7; display: flex; align-items: center; justify-content: center;">
+            <img src="img/cbtis.png" alt="">
+          </div>
+        </div>
+
+        <div class="titulo-card"
+          style="flex: 1 1 400px; background: rgba(236, 240, 241, 0.1); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+          <div style="padding: 20px;">
+            <h3 data-i18n="body.tecnicosuperior" style="font-size: 1.8rem; margin-bottom: 15px;">Técnico Superior
+              Universitario</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">Universidad Tecnológica de Escuinapa</p>
+            <p data-i18n="body.graduacion2" style="font-style: italic;">Año de graduación: 2023</p>
+          </div>
+          <div
+            style="height: 250px; background-color: #bdc3c7; display: flex; align-items: center; justify-content: center;">
+            <img src="img/UTESC_logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .titulo-card:hover {
+      transform: translateY(-10px);
+    }
+
+    @media (max-width: 768px) {
+      #formacion-academica h2 {
+        font-size: 2.5rem;
+      }
+
+      .titulo-card {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+
+  </section>
+  <section id="experiencia-laboral"
+    style="background: linear-gradient(135deg, #0f1012, #1a1a2e); color: #ecf0f1; padding: 60px 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div style="max-width: 1200px; width: 100%;">
+      <h2 data-i18n="nav.changeLanguageAbout lab"
+        style="font-size: 3rem; text-align: center; margin-bottom: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        EXPERIENCIA LABORAL
+      </h2>
+
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+        <div class="experiencia-card"
+          style="flex: 1 1 600px; background: rgba(236, 240, 241, 0.1); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+          <div style="padding: 20px;">
+            <h3 data-i18n="body.practicas" style="font-size: 1.8rem; margin-bottom: 15px;">Prácticas Profesionales</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">Universidad Tecnológica de Escuinapa</p>
+            <p data-i18n="body.duracion" style="font-style: italic;">Duración: 4 meses</p>
+            <p data-i18n="body.desc" style="margin-top: 20px;">Prácticas profesionales en la Universidad Tecnológica de
+              Escuinapa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer id="footer">
     <div class="container">
 
       <p>Miguel Ángel Arenas Quintana</p>
-
+      <p><i class="fas fa-phone"></i> +52 695 951 5241</p>
+      <p><i class="fas fa-envelope"></i> arenasquintanam@gmail.com</p>
     </div>
   </footer>
-  <script src="js/script.js?=3"></script>
+  <script src="js/script.js?=8"></script>
   <script>
     function showInfo(type) {
       const content = document.getElementById('info-content');
